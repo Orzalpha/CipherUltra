@@ -1,0 +1,10 @@
+﻿{
+    "profiles": {
+      "CipherUltra (Package)": {
+        "commandName": "MsixPackage"
+      },
+      "CipherUltra (Unpackaged)": {
+        "commandName": "Project"
+      }
+    }
+}

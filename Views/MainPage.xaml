@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="CipherUltra.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid x:Name="ContentArea">
+
+        <StackPanel x:Name="MainStackpanel"
+                    Orientation="Vertical">
+            <ComboBox x:Name="ModeSelectorCombo"
+                Header="Please choose a mode." FontSize="16" PlaceholderText="Pick a color" 
+                      SelectedValue="Encryption"
+                      Width="200">
+                <x:String>Encryption</x:String>
+                <x:String>Decryption</x:String>
+            </ComboBox>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,20,0,20">
+                <TextBlock Text="Input File:"
+                           FontSize="16"
+                           Margin="0,0,10,0" 
+                           Width="100"/>
+                <TextBox x:Name="InputFilepath" 
+                         MinWidth="400" 
+                         PlaceholderText="Enter a file path or drop here."
+                         AllowDrop="True"
+                         DragEnter="FilepathTextbox_DragEnter"
+                         Drop="FilepathTextbox_Drop"/>
+
+                <Button x:Name="Pick" Content="Pick a file"
+                        Click="Pick_Click" 
+                        Margin="10,0,0,0"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal"
+                        Margin="0,0,0,20">
+                <TextBlock Text="Output File:"
+                           FontSize="16"
+                           Margin="0,0,10,0"
+                           Width="100" />
+                <TextBox x:Name="OutputFilepath"
+                         MinWidth="400"
+                          PlaceholderText="Enter an output path here." />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Your Key:" 
+                           FontSize="16"
+                           Margin="0,0,10,0"
+                           Width="100"/>
+                <TextBox x:Name="KeyTextbox"
+                         MinWidth="400"
+                         PlaceholderText="Enter your key here. (Hex)" />
+                <Button x:Name="RandomKeyButton" Content="Random one"
+                        Margin="10,0,0,0"
+                        Click="RandomKeyButton_Click"/>
+            </StackPanel>
+            <Button x:Name="OkButton" Content="OK" Click="OkButton_Click"
+                    HorizontalAlignment="Left"
+                    Margin="0,20,0,0"/>
+            <TextBlock x:Name="TestTextblock" TextWrapping="WrapWholeWords"/>
+
+        </StackPanel>
+    </Grid>
+</Page>
