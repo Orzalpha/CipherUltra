@@ -90,7 +90,7 @@ public class Zuc
                         {
                             mac.Xor(mac1);
                             mac1.LeftShift(1);
-                            mac1[0] = mac1[0] ^ mac2[7];
+                            mac1[0] = mac1[0] ^ mac2[31];
                             mac2.LeftShift(1);
                         }
                     }
@@ -114,7 +114,7 @@ public class Zuc
                     {
                         mac.Xor(mac1);
                         mac1.LeftShift(1);
-                        mac1[0] = mac1[0] ^ mac2[7];
+                        mac1[0] = mac1[0] ^ mac2[31];
                         mac2.LeftShift(1);
                     }
                 }
@@ -170,7 +170,7 @@ public class Zuc
                         {
                             mac.Xor(mac1);
                             mac1.LeftShift(1);
-                            mac1[0] = mac1[0] ^ mac2[7];
+                            mac1[0] = mac1[0] ^ mac2[31];
                             mac2.LeftShift(1);
                         }
                     }
@@ -193,7 +193,7 @@ public class Zuc
                     {
                         mac.Xor(mac1);
                         mac1.LeftShift(1);
-                        mac1[0] = mac1[0] ^ mac2[7];
+                        mac1[0] = mac1[0] ^ mac2[31];
                         mac2.LeftShift(1);
                     }
                 }
